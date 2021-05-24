@@ -1,0 +1,15 @@
+<title>Testing Project</title>
+<h1>Testing project</h1>
+<link>test-project</link>
+<desc>A beautiful testing post straight from the oven!</desc>
+<--->
+The actual post is written in this space. 
+
+All enters (\n's, newlines) are converted to html friendly format automatically. Otherwise no such changes are made.
+
+I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. All enters (\n's, newlines) are converted to html friendly format automatically. Otherwise no such changes are made. I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. All enters (\n's, newlines) are converted to html friendly format automatically. Otherwise no such changes are made.
+
+Otherwise no such changes are made. I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. I'm not sure what to write here anymore, it will be easier when I'm actually writing about something. All enters (\n's, newlines) are converted to html friendly format automatically. Otherwise no such changes are made.
+
+I'm not sure what to write here anymore, it will be easier when I'm actually writing about something.
+</--->

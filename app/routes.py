@@ -13,9 +13,10 @@ def blog():
 
 @app.route("/blog/<string:name>")
 def blog_post(name):
-
-	return "ayo"
-	return redirect(url_for("blog"), code=301)
+	if not Blog.does_post_exist(name):
+		abort(404)
+	post = Blog.get_post(name)
+	return render_template("blog_post.html", stylesheet="css/blog_post.css", title=post["title"], description=post["title"], post=post)
 
 @app.get("/portfolio")
 def portfolio():

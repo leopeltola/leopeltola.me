@@ -1,12 +1,12 @@
 @use 'base';
 
 html {
-    overflow: hidden;
+    // overflow: hidden;
     height: 100%;
 }
 
 #background {
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 // #card {
@@ -24,4 +24,6 @@ html {
 
 #card-text {
 	width: 80%;
+	margin-bottom: 1em;
+	// height: 1200px;
 }

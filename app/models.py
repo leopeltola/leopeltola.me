@@ -30,6 +30,15 @@ class Blog:
 		return posts
 
 	@staticmethod
+	def get_post(name):
+		try:
+			with open(Blog.path / f"{name}.txt", encoding="utf-8") as file:
+				text = file.read()
+				return Blog.process_raw_post(text)
+		except:
+			return None
+
+	@staticmethod
 	def does_post_exist(name):
 		try:
 			with open(Blog.path / f"{name}.txt", encoding="utf-8") as file:
@@ -43,7 +52,7 @@ class Blog:
 		post["title"] = find_between(text, "<title>", "</title>")
 		post["h1"] = find_between(text, "<h1>", "</h1>")
 		post["desc"] = find_between(text, "<desc>", "</desc>")
-		post["body"] = find_between(text, "<--->", "</--->")
+		post["body"] = find_between(text, "<--->", "</--->").replace("\n<p>\n", "<p>").replace("\n</p>\n", "</p>").replace("\n", "<br>")
 		post["link"] = "/blog/" + find_between(text, "<link>", "</link>")
 		return post
 
