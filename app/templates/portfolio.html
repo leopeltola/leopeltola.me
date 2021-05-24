@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Portfolio</h1>
+<div id="card-unlimited">
+	{% for post in posts %}
+	<div class="project-item">
+		<img class="project-img" src="{{ url_for('static', filename='img/placeholder.png') }}" >
+		<div class="project-info">
+			<h2>leopeltola.fi</h2>
+			<div class="project-tags">
+				<p class="project-tag">Python</p>
+				<p class="project-tag">Flask</p>
+				<p class="project-tag">AWS</p>
+				<p class="project-tag">Html</p>
+				<p class="project-tag">Css</p>
+				<p class="project-tag">Javascript</p>
+			</div>
+			<p class="project-read-button">Read more <span id="arrow">-></span></p>
+		</div>
+	</div>
+	<div class="project-item">
+		<img class="project-img" src="{{ url_for('static', filename='img/placeholder.png') }}" >
+		<div class="project-info">
+			<h2>Jagmallauth</h2>
+			<div class="project-tags">
+				<p class="project-tag">GDScript</p>
+				<p class="project-tag">Gamedev</p>
+				<p class="project-tag">Art</p>
+			</div>
+			<p class="project-read-button">Read more <span id="arrow">-></span></p>
+		</div>
+	</div>
+	<div class="project-item">
+		<img class="project-img" src="{{ url_for('static', filename='img/placeholder.png') }}" >
+		<div class="project-info">
+			<h2>leopeltola.me</h2>
+			<div class="project-tags">
+				<p class="project-tag">Python</p>
+				<p class="project-tag">Flask</p>
+				<p class="project-tag">Deta</p>
+				<p class="project-tag">Design</p>
+				<p class="project-tag">Html</p>
+				<p class="project-tag">Css</p>
+				<p class="project-tag">Javascript</p>
+			</div>
+			<p class="project-read-button">Read more <span id="arrow">-></span></p>
+		</div>
+	</div>
+	<div class="project-item">
+		<img class="project-img" src="{{ url_for('static', filename='img/placeholder.png') }}" >
+		<div class="project-info">
+			<h2>proverkko.fi</h2>
+			<div class="project-tags">
+				<p class="project-tag">Python</p>
+				<p class="project-tag">Netlify</p>
+				<p class="project-tag">Design</p>
+				<p class="project-tag">Html</p>
+				<p class="project-tag">Css</p>
+				<p class="project-tag">Freelance</p>
+			</div>
+			<p class="project-read-button">Read more <span id="arrow"><i class="fas fa-arrow-right"></i></span></p>
+		</div>
+	</div>
+	<div class="project-item">
+		<img class="project-img" src="{{ url_for('static', filename='img/placeholder.png') }}" >
+		<div class="project-info">
+			<h2>tiedostomuuntaja.fi</h2>
+			<div class="project-tags">
+				<p class="project-tag">Python</p>
+				<p class="project-tag">Flask</p>
+				<p class="project-tag">AWS</p>
+				<p class="project-tag">Design</p>
+				<p class="project-tag">Html</p>
+				<p class="project-tag">Css</p>
+			</div>
+			<p class="project-read-button">Read more <span id="arrow"><i class="fas fa-long-arrow-alt-right"></i></span></p>
+		</div>
+	</div>
+	<!-- <a href="{{ post['link'] }}" class="post-item">
+		<h2>{{ post["title"] }}</h2>
+		<p class="post-description">{{ post["desc"] | safe }}</p>
+		<p class="post-read-button">Read post <span id="arrow">-></span></p>
+	</a> -->
+	{% endfor %}
+</div>
+{% endblock %}

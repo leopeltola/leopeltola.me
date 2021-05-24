@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="en">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	{% if title is defined %}
+	<title>{{ title }} - Leo Peltola</title>
+	{% else %}
+	<title>Leo Peltola</title>
+	{% endif %}
+	<meta name="description" content="Personal site">
+	
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename=stylesheet) }}">
+
+	<script src="https://kit.fontawesome.com/d77ed7c80b.js" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="background">
+		<header id="header">
+			<a href="/" id="logo">leopeltola<a>
+			<div id="nav">
+				<a href="/portfolio" class="nav-item">works</a>
+				<a href="/blog" class="nav-item">blog</a>
+			</div>
+		</header>
+		{% block content %}{% endblock %}
+	</div>
+</body>
+</html>
