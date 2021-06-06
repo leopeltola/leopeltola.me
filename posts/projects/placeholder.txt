@@ -1,0 +1,12 @@
+<title>Placeholder</title>
+<h1>Placeholder</h1>
+<link>placeholder</link>
+<tags>Python,Flask,Html,Sass,Web dev</tags>
+<img></img>
+<desc>Placeholder project.</desc>
+<--->
+<h2>Table of Contents</h2>
+<p>
+Placeholder
+</p>
+</--->
