@@ -36,18 +36,6 @@ def project(name):
 	return render_template("project.html", stylesheet="css/project.css", dark_mode=dark_mode, title=project["title"], description=project["title"], project=project)
 
 
-# Redirects
-@app.get("/p")
-@app.get("/projects")
-@app.get("/work")
-@app.get("/works")
-def portfolio_redirect():
-	return redirect(url_for("portfolio"), code=301)
-
-@app.get("/b")
-def blog_redirect():
-	return  redirect(url_for("blog"), code=301)
-
 
 # Error handlers
 @app.errorhandler(404)

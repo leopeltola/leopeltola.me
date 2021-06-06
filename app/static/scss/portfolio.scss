@@ -71,3 +71,16 @@
 a {
 	text-decoration: none;
 }
+
+
+@media only screen and (max-width: 600px) {
+	.project-item {
+		flex-direction: column;
+		.project-info {
+			padding: 1rem 0;
+		}
+		.project-img {
+			width: 100%;
+		}
+	}
+}

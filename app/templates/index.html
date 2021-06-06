@@ -3,12 +3,15 @@
 {% block content %}
 <h1>Hi, I'm Leo</h1>
 <div id="card-unlimited">
-	<p id="card-text">I’m a Finnish guy who likes to code and make things. You can see projects I’ve made or worked on <a href="{{ url_for('portfolio') }}">here.</a> <br><br>I graduated High School in 2020 and now study digital systems and design at Aalto University.<br><br>I'm most experienced with Python (<a href="{{ url_for('project', name='leopeltola-me') }}">This website is written with it!</a>) but I've also used these languages before:</p>
+	<p id="card-text">I’m a Finnish guy who likes to code and make things. You can see projects I’ve made or worked on <a href="{{ url_for('portfolio') }}">here.</a> <br><br>I graduated High School in 2020 and now study digital systems and design at Aalto University.<br><br>I'm most experienced with Python <a href="{{ url_for('project', name='leopeltola-me') }}">(This website is written with it!)</a> but I've also used these languages before:</p>
 	<ul id="skills-list">
 		<li>GDScript <a href="{{ url_for('portfolio') }}">Projects</a></li>
 		<li>Javascript <a href="{{ url_for('portfolio') }}">Projects</a></li>
 		<li>C# <a href="{{ url_for('portfolio') }}">Projects</a></li>
 		<li>C</li>
 	</ul>
+	<p>
+		This website is currently under construction.
+	</p>
 </div>
 {% endblock %}

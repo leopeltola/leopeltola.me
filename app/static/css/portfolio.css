@@ -335,4 +335,16 @@ a {
   text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .project-item {
+    flex-direction: column;
+  }
+  .project-item .project-info {
+    padding: 1rem 0;
+  }
+  .project-item .project-img {
+    width: 100%;
+  }
+}
+
 /*# sourceMappingURL=portfolio.css.map */
