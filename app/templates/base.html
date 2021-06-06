@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 
 <!DOCTYPE html>
+{% if dark_mode %}
+<html dark="true">
+{% else %}
 <html>
+{% endif %}
 <head>
 	<meta charset="utf-8">
 	<meta lang="en">
@@ -30,7 +34,33 @@
 				<a href="{{ url_for('blog') }}" class="nav-item">blog</a>
 			</div>
 		</header>
+		<div class="spacer"></div>
 		{% block content %}{% endblock %}
+		{% if introduction %}
+		<div id="card-limited" style="margin-top: 25px;">
+			<h2>Leo Peltola</h2>
+			<p>Guh!</p>
+		</div>
+		{% endif %}
+		{% if not hide_footer %}
+		<footer>
+			<div id="links">
+				<a href="https://github.com/leopeltola" target=”_blank” class="icon-link" id="github"><i class="fab fa-github"></i><span class="on-hover">Github</span></a>
+				<a href="https://www.linkedin.com/in/leo-peltola" target=”_blank”  class="icon-link" id="linkedin"><i class="fab fa-linkedin"></i><span class="on-hover">LinkedIn</span></a>
+				<a href="https://leopeltola.itch.io/" target=”_blank”  class="icon-link" id="itch-io"><i class="fab fa-itch-io"></i><span class="on-hover">Itch.io</span></a>
+			</div>
+			<label class="switch">
+				{% if dark_mode %}
+				<input type="checkbox" id="dark-mode-switch" checked>
+				{% else %}
+				<input type="checkbox" id="dark-mode-switch">
+				{% endif %}
+				<span class="slider round"><i class="fas fa-moon"></i><i class="fas fa-sun"></i></span>
+			</label>
+			<!-- <p style="color: white;"><i class="far fa-copyright"></i> 2021 Leo Peltola</p> -->
+		</footer>
+		{% endif %}
 	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/core.js') }}"></script>
 </body>
 </html>

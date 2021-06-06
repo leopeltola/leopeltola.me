@@ -275,64 +275,9 @@ input:checked + .slider:before {
     padding: 0 20px;
   }
 }
-.project-item {
-  width: 100%;
-  display: flex;
-  margin-bottom: 2rem;
-}
-.project-item .project-img {
-  width: 40%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 20px;
-}
-.project-item .project-info {
-  flex-grow: 1;
-  padding: 1rem 2rem;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.project-item .project-info h2 {
-  margin: 0;
-}
-.project-item:hover {
-  cursor: pointer;
-}
-.project-item:hover .project-read-button {
-  text-shadow: 0px 4px 13px #9DB9FF;
-}
-.project-item:hover .project-read-button span {
-  margin-left: 1rem;
+card-unlimited p {
+  margin-inline-end: 0px;
+  background-color: red;
 }
 
-.project-tags {
-  display: flex;
-  flex-grow: 1;
-  margin-top: 10px;
-  flex-wrap: wrap;
-  align-content: flex-start;
-}
-.project-tags .project-tag {
-  display: inline-block;
-  margin: 0em 0.5em 0.1em 0;
-  padding: 0.2em;
-  line-height: 0.8em;
-}
-
-.project-read-button {
-  margin: 0;
-  margin-bottom: 1em;
-  color: #0581DB;
-}
-.project-read-button span {
-  transition: all 0.2s ease;
-  margin-left: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-/*# sourceMappingURL=portfolio.css.map */
+/*# sourceMappingURL=project.css.map */

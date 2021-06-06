@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ project["h1"] }}</h1>
+<div id="card-unlimited">
+	{{ project["body"] | safe }}
+</div>
+{% endblock %}

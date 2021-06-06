@@ -1,26 +1,40 @@
-from flask import render_template, redirect, url_for, abort
+from flask import request, render_template, redirect, url_for, abort
 from app import app
-from app.models import Blog
+from app.models import Blog, Project
+
 
 @app.get("/")
 def index():
-	return render_template("index.html", stylesheet="css/index.css")
+	dark_mode = True if request.cookies.get('dark') == "true" else False
+	return render_template("index.html", stylesheet="css/index.css", dark_mode=dark_mode, introduction=True)
 
 @app.route("/blog")
 def blog():
+	dark_mode = True if request.cookies.get('dark') == "true" else False
 	posts = Blog.get_posts()
-	return render_template("blog.html", stylesheet="css/blog.css", title="Blog", posts=posts)
+	return render_template("blog.html", stylesheet="css/blog.css", dark_mode=dark_mode, title="Blog", posts=posts)
 
 @app.route("/blog/<string:name>")
 def blog_post(name):
+	dark_mode = True if request.cookies.get('dark') == "true" else False
 	if not Blog.does_post_exist(name):
 		abort(404)
 	post = Blog.get_post(name)
-	return render_template("blog_post.html", stylesheet="css/blog_post.css", title=post["title"], description=post["title"], post=post)
+	return render_template("blog_post.html", stylesheet="css/blog_post.css", dark_mode=dark_mode, title=post["title"], description=post["title"], post=post)
 
 @app.get("/portfolio")
 def portfolio():
-	return render_template("portfolio.html", stylesheet="css/portfolio.css", title="Portfolio", posts=Blog.get_posts())
+	dark_mode = True if request.cookies.get('dark') == "true" else False
+	return render_template("portfolio.html", stylesheet="css/portfolio.css", dark_mode=dark_mode, title="Portfolio", projects=Project.get_all())
+
+@app.get("/portfolio/<string:name>")
+def project(name):
+	dark_mode = True if request.cookies.get('dark') == "true" else False
+	if not Project.exists(name):
+		abort(404)
+	project = Project.get(name)
+	return render_template("project.html", stylesheet="css/project.css", dark_mode=dark_mode, title=project["title"], description=project["title"], project=project)
+
 
 # Redirects
 @app.get("/p")
