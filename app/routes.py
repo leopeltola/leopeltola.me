@@ -6,7 +6,7 @@ from app.models import Blog, Project
 @app.get("/")
 def index():
 	dark_mode = True if request.cookies.get('dark') == "true" else False
-	return render_template("index.html", stylesheet="css/index.css", dark_mode=dark_mode, introduction=True)
+	return render_template("index.html", stylesheet="css/index.css", dark_mode=dark_mode)
 
 @app.route("/blog")
 def blog():
