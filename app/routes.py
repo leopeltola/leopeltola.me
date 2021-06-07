@@ -40,4 +40,5 @@ def project(name):
 # Error handlers
 @app.errorhandler(404)
 def error_404(e):
-	return render_template("404.html", stylesheet="css/index.css")
+	dark_mode = True if request.cookies.get('dark') == "true" else False
+	return render_template("404.html", stylesheet="css/index.css", dark_mode=dark_mode)

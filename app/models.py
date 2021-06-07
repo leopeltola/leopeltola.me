@@ -34,7 +34,7 @@ class Blog:
 	@staticmethod
 	def get_post(name):
 		try:
-			with open(Blog.path / f"{name}.txt", encoding="utf-8") as file:
+			with open(Blog.path / f"{name}", encoding="utf-8") as file:
 				text = file.read()
 				return Blog.process_raw_post(text)
 		except:
@@ -43,7 +43,7 @@ class Blog:
 	@staticmethod
 	def does_post_exist(name):
 		try:
-			with open(Blog.path / f"{name}.txt", encoding="utf-8") as file:
+			with open(Blog.path / f"{name}", encoding="utf-8") as file:
 				return True
 		except:
 			return False
@@ -82,7 +82,7 @@ class Project:
 	@staticmethod
 	def get(name):
 		try:
-			with open(Project.path / f"{name}.txt", encoding="utf-8") as file:
+			with open(Project.path / f"{name}", encoding="utf-8") as file:
 				text = file.read()
 				return Project._process_raw_post(text)
 		except:
@@ -91,8 +91,8 @@ class Project:
 	@staticmethod
 	def exists(name):
 		try:
-			print("opening:", str(Project.path / f"{name}.txt"))
-			with open(Project.path / f"{name}.txt", encoding="utf-8") as file:
+			print("opening:", str(Project.path / f"{name}"))
+			with open(Project.path / f"{name}", encoding="utf-8") as file:
 				print("Exists!")
 				return True
 		except:
@@ -108,6 +108,8 @@ class Project:
 		post["body"] = find_between(text, "<--->", "</--->").replace("\n<p>\n", "<p>").replace("\n</p>\n", "</p>").replace("\n", "<br>")
 		post["link"] = url_for("project", name=find_between(text, "<link>", "</link>"))
 		post["tags"] = find_between(text, "<tags>", "</tags>").split(",")
+		post["img"] = url_for("static", filename="img/" + find_between(text, "<img>", "</img>"))
+		print(post["img"])
 		return post
 
 

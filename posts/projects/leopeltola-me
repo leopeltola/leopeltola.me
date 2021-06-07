@@ -1,10 +1,16 @@
-<title>Quantum Tower</title>
-<h1>Quantum Tower</h1>
-<link>quantum-tower</link>
-<tags>Godot,Python,Flask,Art,Game dev</tags>
-<img></img>
-<desc>A Godot arcade shooter with a global leaderboard.</desc>
+<title>This Website</title>
+<h1>This Website!</h1>
+<link>leopeltola-me</link>
+<tags>Python,Flask,Html,Sass,Web dev,Heroku</tags>
+<img>placeholder.png</img>
+<desc>A blog made with Python and Flask.</desc>
 <--->
+<h2>Table of Contents</h2>
+<ul>
+	<li>Cee bee gee GUH!</li>
+	<li>B</li>
+	<li>A</li>
+</ul>
 <p>
 The actual post is written in this space. 
 
