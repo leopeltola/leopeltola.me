@@ -20,7 +20,7 @@ def blog_post(name):
 	if not Blog.does_post_exist(name):
 		abort(404)
 	post = Blog.get_post(name)
-	return render_template("blog_post.html", stylesheet="css/blog_post.css", dark_mode=dark_mode, title=post["title"], description=post["title"], post=post)
+	return render_template("blog_post.html", stylesheet="css/blog_post.css", dark_mode=dark_mode, title=post["title"], description=post["title"], post=post, introduction=True)
 
 @app.get("/projects")
 def portfolio():

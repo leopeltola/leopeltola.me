@@ -41,8 +41,13 @@
 		{% block content %}{% endblock %}
 		{% if introduction %}
 		<div id="card-limited" style="margin-top: 25px;">
-			<h2>Leo Peltola</h2>
-			<p>Guh!</p>
+			<div class="introduction-container">
+				<img class="profile-pic" src="{{ url_for('static', filename='img/jagmallauth.png') }}">
+				<div>
+					<h2>Leo Peltola</h2>
+					<p>I mostly write about web and game development as I learn more. Feel free to contact me at leopeltola@gmail.com</p>
+				</div>
+			</div>
 		</div>
 		{% endif %}
 		{% if not hide_footer %}

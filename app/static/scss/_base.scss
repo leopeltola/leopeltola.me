@@ -293,6 +293,26 @@ input:checked + .slider:before {
 	image-rendering: pixelated;
 }
 
+.profile-pic {
+	border-radius: 100px;
+	width: 150px;
+	height: 150px;
+}
+
+.introduction-container {
+	display: flex;
+	align-items: flex-start;
+
+	div {
+		margin-left: 40px;
+		// background-color: red;
+		h2 {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}
+
 @media only screen and (max-width: 600px) {
   #card-unlimited {
     padding: $default-padding $minimal-padding;

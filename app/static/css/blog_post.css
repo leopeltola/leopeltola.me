@@ -274,6 +274,24 @@ input:checked + .slider:before {
   image-rendering: pixelated;
 }
 
+.profile-pic {
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+.introduction-container {
+  display: flex;
+  align-items: flex-start;
+}
+.introduction-container div {
+  margin-left: 40px;
+}
+.introduction-container div h2 {
+  padding: 0;
+  margin: 0;
+}
+
 @media only screen and (max-width: 600px) {
   #card-unlimited {
     padding: 50px 20px;
