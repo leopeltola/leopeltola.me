@@ -22,12 +22,12 @@ def blog_post(name):
 	post = Blog.get_post(name)
 	return render_template("blog_post.html", stylesheet="css/blog_post.css", dark_mode=dark_mode, title=post["title"], description=post["title"], post=post)
 
-@app.get("/portfolio")
+@app.get("/projects")
 def portfolio():
 	dark_mode = True if request.cookies.get('dark') == "true" else False
 	return render_template("portfolio.html", stylesheet="css/portfolio.css", dark_mode=dark_mode, title="Portfolio", projects=Project.get_all())
 
-@app.get("/portfolio/<string:name>")
+@app.get("/projects/<string:name>")
 def project(name):
 	dark_mode = True if request.cookies.get('dark') == "true" else False
 	if not Project.exists(name):

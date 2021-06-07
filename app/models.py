@@ -108,8 +108,8 @@ class Project:
 		post["body"] = find_between(text, "<--->", "</--->").replace("\n<p>\n", "<p>").replace("\n</p>\n", "</p>").replace("\n", "<br>")
 		post["link"] = url_for("project", name=find_between(text, "<link>", "</link>"))
 		post["tags"] = find_between(text, "<tags>", "</tags>").split(",")
-		post["img"] = url_for("static", filename="img/" + find_between(text, "<img>", "</img>"))
-		print(post["img"])
+		post["img"] = url_for("static", filename="img/" + find_between(text, "<img>", "</img>").replace("[PIXEL]", ""))
+		post["pixel"] = True if "[PIXEL]" in find_between(text, "<img>", "</img>") else False
 		return post
 
 

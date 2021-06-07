@@ -5,7 +5,7 @@
 <div id="card-unlimited">
 	{% for project in projects %}
 	<a class="project-item" href="{{ project.link }}">
-		<img class="project-img" src="{{ project.img }}" >
+		<img class="project-img {% if project.pixel %}pixelated{% endif %}" src="{{ project.img }}">
 		<div class="project-info">
 			<h2>{{ project.h1 }}</h2>
 			<div class="project-tags">
