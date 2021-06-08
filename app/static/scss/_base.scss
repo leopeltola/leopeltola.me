@@ -297,6 +297,7 @@ input:checked + .slider:before {
 	border-radius: 100px;
 	width: 150px;
 	height: 150px;
+	object-fit: cover;
 }
 
 .introduction-container {
