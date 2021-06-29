@@ -36,6 +36,10 @@ def project(name):
 	return render_template("project.html", stylesheet="css/project.css", dark_mode=dark_mode, title=project["title"], description=project["title"], project=project)
 
 
+@app.get("/google9ed08daf26d5289b.html")
+def google_verification():
+	return app.send_static_file("google9ed08daf26d5289b.html")
+
 
 # Error handlers
 @app.errorhandler(404)
