@@ -41,6 +41,11 @@ def google_verification():
 	return app.send_static_file("google9ed08daf26d5289b.html")
 
 
+@app.get("/sitemap")
+def sitemap():
+	return app.send_static_file("sitemap.xml")
+
+
 # Error handlers
 @app.errorhandler(404)
 def error_404(e):
